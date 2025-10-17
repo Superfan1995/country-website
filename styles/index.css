@@ -1,0 +1,328 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+
+body {
+    font-family: "Roboto", 'Times New Roman', Times, serif;
+    font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #000000;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0 0 0; /* top, left + right, bottom*/
+}
+
+/* Elements
+--------------------------------------------- */
+
+section,
+aside {
+	padding: 0 1rem;
+}
+
+hr.solid {
+  border-top: 3px solid #bbbbbb;
+}
+
+/* Links
+--------------------------------------------- */
+
+.nav-link,
+.nav-link:visited { 
+	color: #ffffff;
+	text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    background-color: #a7a7a7;
+    border-radius: 40%;
+}
+
+.nav-link:focus {
+	outline: 1px dotted;
+}
+
+.section-link,
+.section-link:visited { 
+	color: #000000;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+
+.site-header {
+    background-color: #000000;
+    position: static;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0 1rem;
+    z-index: 3;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-icon {
+    padding: 0 0 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.header-nav {
+    height: 100%;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.header-list li {
+    display: inline-block;
+}
+
+.header-list li a {
+    text-align: center;
+    color: #ffffff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 50em) {
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: 100%;
+    }
+
+}
+
+/* Main
+--------------------------------------------- */
+
+.banner {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-name {
+    position: absolute;
+	left: 0;
+    top: 0;
+	margin: 1rem 1rem;
+	text-align: center;
+	color: #ffffff;
+	font-size: 2rem;
+    font-family: "Racing Sans One", sans-serif;
+}
+
+.banner-video {
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+@media screen and (min-width: 50em) {
+    .banner-name {
+        font-size: 5rem;
+    }
+}
+
+/* blockquote
+--------------------- */
+
+.quote {
+    display: block;
+    left: 0;
+	right: 0;
+	margin: 1rem auto 1rem;
+    padding: 1rem 2rem 1rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    max-width: 35rem;
+    box-shadow: 2px 2px 5px #000;
+    background-color: #eeeded;
+}
+
+.quote p {
+    font-style: italic;
+}
+
+.quote-cite {
+    text-align: right;
+}
+
+/* section and article
+--------------------- */
+
+/* general
+---------- */
+
+.index-section {
+    margin: 3rem 1rem 3rem;
+}
+
+.index-section h1 {
+    text-align: center;
+}
+
+.index-section h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.index-article {
+    background-color: #eeeded;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.index-article h3 {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 50em) {
+
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* table
+---------- */
+
+.index-article p {
+    padding: 0 1.5rem 1.5rem 1rem;
+}
+
+.table-section h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skytrain-schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skytrain-table {
+    margin: 1rem 2rem 1rem;
+    max-width: 30rem;
+}
+
+.skytrain-table {
+    text-align: left;
+}
+
+.skytrain-table thead tr th {
+    color: white;
+    background-color: #00355F;
+    padding: 0.25rem 0.5rem 0.25rem;
+}
+
+.skytrain-table tbody tr td {
+    background-color: #eeeded;
+    padding: 0.25rem 0.5rem 0.25rem;
+}
+
+/* form
+---------- */
+
+.subject {
+    height: 5rem;
+    width: 15rem;
+}
+
+@media screen and (min-width: 50em) {
+
+    .subject {
+        width: 25rem;
+    }
+}
+
+/* Footer
+--------------------------------------------- */
+
+footer {
+    background-color: #666464;
+    position: static;
+    margin-top: 3em;
+    width: 100%;
+    height: 4rem;
+    z-index: 3;
+}
+
+footer p {
+    padding-top: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffff;
+}
