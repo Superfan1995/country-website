@@ -295,14 +295,14 @@ hr.solid {
 /* form
 ---------- */
 
-.subject {
+.msg {
     height: 5rem;
     width: 15rem;
 }
 
 @media screen and (min-width: 50em) {
 
-    .subject {
+    .msg {
         width: 25rem;
     }
 }
